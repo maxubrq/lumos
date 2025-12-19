@@ -1,0 +1,43 @@
+{
+  "name": "lumos",
+  "version": "0.1.0",
+  "description": "No-Surprise control-plane foundation (single instance first, production-grade by design).",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "dev": "node --watch --enable-source-maps dist/index.js",
+    "build": "tsc -p tsconfig.json",
+    "clean": "rimraf dist node_modules/.cache",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --check",
+    "format:fix": "prettier . --write",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "ci": "pnpm -s typecheck && pnpm -s lint && pnpm -s format && pnpm -s test"
+  },
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "packageManager": "pnpm@10.26.1",
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^24.0.0",
+    "eslint": "^9.39.2",
+    "globals": "^16.0.0",
+    "prettier": "^3.7.4",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
+  }
+}

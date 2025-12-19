@@ -1,0 +1,51 @@
+# ===============================
+# Dependencies
+# ===============================
+node_modules/
+.pnpm-store/
+
+# ===============================
+# Build output
+# ===============================
+dist/
+coverage/
+*.tsbuildinfo
+
+# ===============================
+# Cache & tooling
+# ===============================
+node_modules/.cache/
+.eslintcache
+.vitest/
+
+# ===============================
+# Logs
+# ===============================
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===============================
+# Environment variables
+# ===============================
+.env
+.env.*
+!.env.example
+
+# ===============================
+# OS / Editor
+# ===============================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# ===============================
+# Temporary / misc
+# ===============================
+*.swp
+*.tmp
+*.log
